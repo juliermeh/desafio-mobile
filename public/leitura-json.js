@@ -1,0 +1,1 @@
+const {ID,titulo,descricao,imagem} = require('http-request.http')
