@@ -31,8 +31,8 @@ function initMap() {
 }
 
 function App() {
-  Conexao();
-  return ("index.html");
+  // Conexao();
+  return('index.html');
 }
 
 export default App;
