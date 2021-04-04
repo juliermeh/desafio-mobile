@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import google from 'googlemaps';
 
-import md5 from "md5";
-import React, {useEffect} from "react";
-import axios from "axios";
+import md5 from 'md5';
+import React, {useEffect} from 'react';
+import axios from 'axios';
 
 const baseURL = 'http://gateway.marvel.com/v1/public/comics?';
 const publicKey = '';
@@ -31,7 +32,6 @@ function initMap() {
 
 function App() {
   Conexao();
-  initMap();
   return ("index.html");
 }
 

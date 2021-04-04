@@ -30,7 +30,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <div id="root">
+    <div id="root"></div>
       <div id="table-comics">
         <table id="comics">
           <tr>
@@ -46,14 +46,12 @@
             <td><img src="logo192.png"></td>
           </tr>
         </table>
-      </div>
 
-      <div id="map"></div>
-      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-      <script
-              src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-              async
-      ></script>
-    </div>
+        <div id="map"></div>
+        <script
+                src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+                async
+        ></script>
+      </div>
   </body>
 </html>
