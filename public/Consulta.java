@@ -6,6 +6,7 @@ public class Consulta {
 
     public ArrayList[Comic] lista_comics(){
         ArrayList[] listaDeComics = new ArrayList[Comics]();
+        Comic comic = new Comic();
         return listaDeComics;
 
     }
