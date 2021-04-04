@@ -1,5 +1,11 @@
+html,
 body {
-  margin: 0;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Nunito',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -52,4 +58,8 @@ th, td {
 #comics th {
   background-color: crimson;
   color: white;
+}
+
+#map {
+  height: 100%;
 }

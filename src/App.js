@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import React, {useEffect} from 'react';
-import axios from 'axios';
-import md5 from 'md5';
+
+import md5 from "md5";
+import React, {useEffect} from "react";
+import axios from "axios";
 
 const baseURL = 'http://gateway.marvel.com/v1/public/comics?';
 const publicKey = '';
@@ -19,8 +20,18 @@ const Conexao: React.FC = () => {
   return null;
 }
 
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+  });
+}
+
 function App() {
-  const conexao = Conexao();
+  Conexao();
+  initMap();
   return ("index.html");
 }
 

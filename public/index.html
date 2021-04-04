@@ -5,6 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <meta
       name="description"
       content="Crie uma Single Page Application para uma consulta de quadrinhos utilizando a API da Marvel."
@@ -28,22 +29,31 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <div id="table-comics">
-      <table id="comics">
-        <tr>
-          <th>ID</th>
-          <th>Título</th>
-          <th>Descrição</th>
-          <th>Imagem</th>
-        </tr>
-        <tr>
-          <td>Jill</td>
-          <td><a href="">Smith</a></td>
-          <td>50</td>
-          <td><img src="logo192.png"></td>
-        </tr>
-      </table>
+
+    <div id="root">
+      <div id="table-comics">
+        <table id="comics">
+          <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Descrição</th>
+            <th>Imagem</th>
+          </tr>
+          <tr>
+            <td>Jill</td>
+            <td><a href="">Smith</a></td>
+            <td>50</td>
+            <td><img src="logo192.png"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="map"></div>
+      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+      <script
+              src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+              async
+      ></script>
     </div>
   </body>
 </html>

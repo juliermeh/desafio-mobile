@@ -2,7 +2,7 @@ https://gateway.marvel.com/v1/public/comics
 Request Method: GET
 Params: {
   "apikey": "",
-  "ts": "1",
+  "ts": "",
   "hash": "a84a8246b1d9234c43c13f9d1924b328"
 }
 Headers: {
