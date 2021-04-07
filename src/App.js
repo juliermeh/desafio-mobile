@@ -1,38 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
-import google from 'googlemaps';
+import '/public/Comics';
 
-import md5 from 'md5';
-import React, {useEffect} from 'react';
-import axios from 'axios';
+import React, { Component } from 'react';
+import ReactTable from "react-table";
+import "react-table/react-table.css";
+import comics from "../public/Comics";
 
-const baseURL = 'http://gateway.marvel.com/v1/public/comics?';
-const publicKey = '';
-const privateKey = '';
-const ts = Number(new Date());
-const hash = md5(ts + privateKey + publicKey);
 
-const Conexao: React.FC = () => {
-  useEffect(() => {
-    axios.get(baseURL+'ts=${ts}&apikey=${publicKey}&hash=${hash}')
-        .then(response => console.log(response))
-        .catch(erro => console.log(erro))
-  },[]);
-  return null;
-}
+exports.createClient = function(options) {
 
-let map;
+  if (!options) {
+    throw new Error('You must provide API credentials');
+  }
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
-}
+  if (!options.privateKey) {
+    throw new Error('You must specify a private API key');
+  }
+
+  if (!options.publicKey) {
+    throw new Error('You must specify a public API key');
+  }
+
+  return require('./lib')(options);
+};
 
 function App() {
   // Conexao();
-  return('index.html');
+  return('index.js');
 }
 
 export default App;

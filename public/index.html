@@ -4,11 +4,17 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#282c34" />
+    <meta name="pagename" content="React Marvel API Demo with Maps API">
+    <meta name="author" content="Julierme Jadon">
+    <link rel="dns-prefetch" href="//i.annihil.us">
+    <link rel="dns-prefetch" href="//gateway.marvel.com">
+    <link rel="preconnect" href="//gateway.marvel.com">
+    <link rel="preconnect" href="//i.annihil.us">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <meta
       name="description"
-      content="Crie uma Single Page Application para uma consulta de quadrinhos utilizando a API da Marvel."
+      content="Crie uma Single Page Application"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -35,24 +41,26 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
       <div id="table-comics">
-        <table id="comics">
+        <table id="comics" datatype="internals.findAll">
           <tr>
             <th>ID</th>
             <th>Título</th>
             <th>Descrição</th>
+            <th>Personagens</th>
             <th>Imagem</th>
           </tr>
           <tr>
-            <td>Jill</td>
-            <td><a href="">Smith</a></td>
-            <td>50</td>
-            <td><img src="logo192.png"></td>
+            <td>{comic.ID}</td>
+            <td>{comic.title}</a></td>
+            <td>{comic.description}</td>
+            <td>{comic.characters }</td>
+            <td>{comic.thumbnail}</td>
           </tr>
         </table>
 
         <div id="map"></div>
         <script
-                src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFr2QZuPz76sgkDY1Ybxvh1oQWwUWxPsc&callback=initMap&libraries=&v=weekly"
                 async
         ></script>
       </div>
